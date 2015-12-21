@@ -254,6 +254,143 @@ a.anchor-link {
 
 </div>
 </div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="About-Me">About Me<a class="anchor-link" href="#About-Me">&#182;</a></h1><ul>
+<li>大三學長</li>
+<li>資料分析有興趣，找老師做研究</li>
+<li>丟給我很多有趣的東西，like Pandas</li>
+</ul>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#20160;&#40636;&#26159;Pandas">&#20160;&#40636;&#26159;Pandas<a class="anchor-link" href="#&#20160;&#40636;&#26159;Pandas">&#182;</a></h1><ul>
+<li>高效能的資料處理套件</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#33287;&#20854;&#20182;&#24037;&#20855;&#27604;&#36611;">&#33287;&#20854;&#20182;&#24037;&#20855;&#27604;&#36611;<a class="anchor-link" href="#&#33287;&#20854;&#20182;&#24037;&#20855;&#27604;&#36611;">&#182;</a></h1><h2 id="Pandas-vs-Excel">Pandas vs Excel<a class="anchor-link" href="#Pandas-vs-Excel">&#182;</a></h2><ul>
+<li>可以處理較大的資料</li>
+<li>上手之後很多事情都可以一行解決</li>
+</ul>
+<h2 id="Pandas-vs-Database">Pandas vs Database<a class="anchor-link" href="#Pandas-vs-Database">&#182;</a></h2><ul>
+<li>比較輕量</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-vs-Pure-Python">Pandas vs Pure Python<a class="anchor-link" href="#Pandas-vs-Pure-Python">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">sample_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<span class="n">sample_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">timeit</span> sample_series+sample_series
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1000 loops, best of 3: 1.58 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">timeit</span> [i+i for i in sample_list]
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 loops, best of 3: 85.6 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32317;&#32080;">&#32317;&#32080;<a class="anchor-link" href="#&#32317;&#32080;">&#182;</a></h2><ul>
+<li>Pandas適合處理中型的資料</li>
+<li>Pandas很快</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -266,7 +403,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span>
@@ -285,11 +422,10 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
-<span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">series</span>
 </pre></div>
 
 </div>
@@ -300,17 +436,39 @@ a.anchor-link {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
 <pre>王小明    160
 陳大頭    155
 謝黑客    170
-dtype: int64
-</pre>
+dtype: int64</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -354,7 +512,7 @@ dtype: int64
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;">&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;<a class="anchor-link" href="#&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;">&#182;</a></h1>
+<h2 id="&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;">&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;<a class="anchor-link" href="#&#24341;&#29992;&#27169;&#32068;&#30340;&#20854;&#20182;&#26041;&#24335;">&#182;</a></h2>
 </div>
 </div>
 </div><div class="fragment">
@@ -363,13 +521,13 @@ dtype: int64
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21029;&#21517;">&#21029;&#21517;<a class="anchor-link" href="#&#21029;&#21517;">&#182;</a></h2>
+<h3 id="&#21029;&#21517;">&#21029;&#21517;<a class="anchor-link" href="#&#21029;&#21517;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -391,13 +549,13 @@ dtype: int64
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;">&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;<a class="anchor-link" href="#&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;">&#182;</a></h2>
+<h3 id="&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;">&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;<a class="anchor-link" href="#&#21482;&#24341;&#20837;&#35201;&#29992;&#30340;&#26481;&#35199;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">Series</span><span class="p">,</span> <span class="n">DataFrame</span>
@@ -416,7 +574,7 @@ dtype: int64
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Import the IPython display module</span>
@@ -432,7 +590,7 @@ dtype: int64
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
@@ -457,18 +615,22 @@ dtype: int64
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;">&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;<a class="anchor-link" href="#&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;">&#182;</a></h1>
+<h1 id="&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;">&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;<a class="anchor-link" href="#&#20351;&#29992;Pandas&#19981;&#21487;&#19981;&#30693;&#30340;&#20841;&#31278;&#36039;&#26009;&#22411;&#24907;&#65288;&#39006;&#21029;&#65289;">&#182;</a></h1><ul>
+<li>Series</li>
+<li>Dataframe</li>
+</ul>
+
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Series&#65288;&#24207;&#21015;&#65289;">Series&#65288;&#24207;&#21015;&#65289;<a class="anchor-link" href="#Series&#65288;&#24207;&#21015;&#65289;">&#182;</a></h2><h3 id="Series-vs-List">Series vs List<a class="anchor-link" href="#Series-vs-List">&#182;</a></h3><ul>
-<li>群集資料型態、有序的</li>
-<li>BUT同一個Series只能是相同型態的物件</li>
+<h1 id="Series&#65288;&#24207;&#21015;&#65289;&#31777;&#20171;">Series&#65288;&#24207;&#21015;&#65289;&#31777;&#20171;<a class="anchor-link" href="#Series&#65288;&#24207;&#21015;&#65289;&#31777;&#20171;">&#182;</a></h1><h3 id="Series-vs-List">Series vs List<a class="anchor-link" href="#Series-vs-List">&#182;</a></h3><ul>
+<li>同：群集資料型態、有序的</li>
+<li>異：同一個Series只能是相同型態的物件</li>
 </ul>
 <table>
 <thead><tr>
@@ -490,14 +652,15 @@ dtype: int64
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">list_</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;✈&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span>  <span class="s">&quot;ob&#39;_&#39;bv&quot;</span><span class="p">,</span> <span class="p">{}]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">list_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 </pre></div>
 
 </div>
@@ -511,6 +674,7 @@ dtype: int64
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[&apos;✈&apos;, 729, &quot;ob&apos;_&apos;bv&quot;, {}]
+[&quot;ob&apos;_&apos;bv&quot;, {}]
 </pre>
 </div>
 </div>
@@ -518,14 +682,14 @@ dtype: int64
 </div>
 </div>
 
-</div>
+</div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s">&#39;✈&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span>  <span class="s">&quot;ob&#39;_&#39;bv&quot;</span><span class="p">,</span> <span class="p">{}])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">series</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">&#39;int64&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 </pre></div>
 
@@ -539,7 +703,10 @@ dtype: int64
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object
+<pre>2    ob&apos;_&apos;bv
+3         {}
+dtype: object
+object
 </pre>
 </div>
 </div>
@@ -549,10 +716,10 @@ dtype: int64
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">ValueError</span>                                Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-9-f1eca196aaa5&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      1</span> series <span class="ansiyellow">=</span> pd<span class="ansiyellow">.</span>Series<span class="ansiyellow">(</span><span class="ansiyellow">[</span><span class="ansiblue">&apos;✈&apos;</span><span class="ansiyellow">,</span> <span class="ansicyan">9</span><span class="ansiyellow">**</span><span class="ansicyan">3</span><span class="ansiyellow">,</span>  <span class="ansiblue">&quot;ob&apos;_&apos;bv&quot;</span><span class="ansiyellow">,</span> <span class="ansiyellow">{</span><span class="ansiyellow">}</span><span class="ansiyellow">]</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">      2</span> print<span class="ansiyellow">(</span>series<span class="ansiyellow">.</span>dtype<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">----&gt; 3</span><span class="ansiyellow"> </span>print<span class="ansiyellow">(</span>series<span class="ansiyellow">.</span>astype<span class="ansiyellow">(</span><span class="ansiblue">&apos;int64&apos;</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>dtype<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">&lt;ipython-input-86-40a011ed83a4&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      3</span> <span class="ansiyellow"></span>
+<span class="ansigreen">      4</span> print<span class="ansiyellow">(</span>series<span class="ansiyellow">.</span>dtype<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 5</span><span class="ansiyellow"> </span>print<span class="ansiyellow">(</span>series<span class="ansiyellow">.</span>astype<span class="ansiyellow">(</span><span class="ansiblue">&apos;int64&apos;</span><span class="ansiyellow">)</span><span class="ansiyellow">.</span>dtype<span class="ansiyellow">)</span><span class="ansiyellow"></span>
 
 <span class="ansigreen">/usr/local/lib/python3.4/dist-packages/pandas/core/generic.py</span> in <span class="ansicyan">astype</span><span class="ansiblue">(self, dtype, copy, raise_on_error, **kwargs)</span>
 <span class="ansigreen">   2630</span> <span class="ansiyellow"></span>
@@ -607,66 +774,34 @@ dtype: int64
 </div>
 </div>
 
-</div></div></section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Series-vs-Dictionary">Series vs Dictionary<a class="anchor-link" href="#Series-vs-Dictionary">&#182;</a></h3><ul>
-<li>既像List又像Dictionary</li>
+<h1 id="&#25805;&#20316;Series">&#25805;&#20316;Series<a class="anchor-link" href="#&#25805;&#20316;Series">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series&#30340;&#21462;&#20540;">Series&#30340;&#21462;&#20540;<a class="anchor-link" href="#Series&#30340;&#21462;&#20540;">&#182;</a></h2><ul>
+<li>Series是有序的</li>
 </ul>
-<table>
-<thead><tr>
-<th>類別</th>
-<th>舉例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Dictionary</td>
-<td>{'小明': 30, '小華': 15}</td>
-</tr>
-<tr>
-<td>Series</td>
-<td>pd.Series({'小明': 30, '小華': 15})</td>
-</tr>
-</tbody>
-</table>
 
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="nb">filter</span>
-<span class="o">+-*/</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dataframe">Dataframe<a class="anchor-link" href="#Dataframe">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -676,25 +811,10 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-        <span class="s">&#39;r&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-    <span class="p">})</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">series</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -705,7 +825,1032 @@ dtype: int64
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[91]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">series</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[92]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3    4
+4    5
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">series</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[94]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    0
+1    2
+2    3
+3    4
+4    5
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21152;&#24375;&#29256;&#30340;&#21462;&#20540;">&#21152;&#24375;&#29256;&#30340;&#21462;&#20540;<a class="anchor-link" href="#&#21152;&#24375;&#29256;&#30340;&#21462;&#20540;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">成績</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">55</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">99</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">成績</span> <span class="o">&gt;</span> <span class="mi">60</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[100]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    False
+1    False
+2    False
+3    False
+4     True
+dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">成績</span><span class="p">[</span><span class="n">成績</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[101]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4    99
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Series&#30340;&#36939;&#31639;">Series&#30340;&#36939;&#31639;<a class="anchor-link" href="#Series&#30340;&#36939;&#31639;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">成績</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">55</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">99</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">成績</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">成績</span><span class="o">*</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">成績</span><span class="o">**</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0     65
+1     50
+2     40
+3     20
+4    109
+dtype: int64
+0    16.5
+1    12.0
+2     9.0
+3     3.0
+4    29.7
+dtype: float64
+0    74.161985
+1    63.245553
+2    54.772256
+3    31.622777
+4    99.498744
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#29694;&#22312;&#20320;&#30475;&#25026;&#20102;&#21966;&#65311;">&#29694;&#22312;&#20320;&#30475;&#25026;&#20102;&#21966;&#65311;<a class="anchor-link" href="#&#29694;&#22312;&#20320;&#30475;&#25026;&#20102;&#21966;&#65311;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">sample_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+<span class="n">sample_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1000000</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">timeit</span> sample_series+sample_series
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>100 loops, best of 3: 1.89 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">timeit</span> [i+i for i in sample_list]
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 loops, best of 3: 95.7 ms per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># Import the IPython display module</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s">&#39;/notebooks/python-course/playground.ipynb&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="900"
+            height="500"
+            src="/notebooks/python-course/playground.ipynb"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>也可以跟另外一個相加減乘除！</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Series&#20063;&#26377;&#19981;&#25797;&#38263;&#30340;&#22320;&#26041;">Series&#20063;&#26377;&#19981;&#25797;&#38263;&#30340;&#22320;&#26041;<a class="anchor-link" href="#Series&#20063;&#26377;&#19981;&#25797;&#38263;&#30340;&#22320;&#26041;">&#182;</a></h1><ul>
+<li>Series缺乏延展性，一旦建立就無法改變長度</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># &lt;- [1]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c"># &lt;- [1, 2]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c"># &lt;- [1, 2, 3]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c"># &lt;- [1, 2, 3, 4]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>139910104334280 []
+139910104334280 [1, 2, 3, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img  src="giphy.gif"/></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">]))</span> <span class="c"># &lt;- [1]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">2</span><span class="p">]))</span> <span class="c"># &lt;- [1, 2]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">]))</span> <span class="c"># &lt;- [1, 2, 3]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">4</span><span class="p">]))</span> <span class="c"># &lt;- [1, 2, 3, 4]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>139909627960512 []
+139909627960344 [1, 2, 3, 4]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img  src="7cefdfa5jw1etvmei5o3ig206o06dkjl.gif"/></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#31777;&#21934;&#32317;&#32080;">&#31777;&#21934;&#32317;&#32080;<a class="anchor-link" href="#&#31777;&#21934;&#32317;&#32080;">&#182;</a></h2><table>
+<thead><tr>
+<th>類別</th>
+<th>Series</th>
+<th>List</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>特點</td>
+<td>優異的運算速度</td>
+<td>資料操作較靈活</td>
+</tr>
+<tr>
+<td>代價</td>
+<td>一旦建立就不能改變長度</td>
+<td>運算速度較差</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>不要瞧不起List，List也是很厲害的！</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Series&#30340;Index">Series&#30340;Index<a class="anchor-link" href="#Series&#30340;Index">&#182;</a></h1><ul>
+<li>有的時候，他又很像Dictionary</li>
+</ul>
+<table>
+<thead><tr>
+<th>類別</th>
+<th>舉例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dictionary</td>
+<td>{'小明': 2, '小華': 4, '小美': 6}</td>
+</tr>
+<tr>
+<td>Series</td>
+<td>pd.Series([1, 2, 3], index=['小明', '小華', '小美'])</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#31435;&#19968;&#20491;&#26377;Index&#30340;Series">&#24314;&#31435;&#19968;&#20491;&#26377;Index&#30340;Series<a class="anchor-link" href="#&#24314;&#31435;&#19968;&#20491;&#26377;Index&#30340;Series">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">絆倒次數</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;小明&#39;</span><span class="p">,</span> <span class="s">&#39;小華&#39;</span><span class="p">,</span> <span class="s">&#39;小美&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">絆倒次數</span><span class="p">[</span><span class="s">&#39;小華&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#29978;&#33267;&#21487;&#20197;&#23559;&#19968;&#20491;dict&#36681;&#22411;&#28858;Series">&#29978;&#33267;&#21487;&#20197;&#23559;&#19968;&#20491;dict&#36681;&#22411;&#28858;Series<a class="anchor-link" href="#&#29978;&#33267;&#21487;&#20197;&#23559;&#19968;&#20491;dict&#36681;&#22411;&#28858;Series">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">年紀</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s">&#39;小明&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;小華&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s">&#39;小美&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But就變無序了</p>
+
+</div>
+</div>
+</div>
+</aside>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">年紀</span><span class="p">[</span><span class="s">&#39;小美&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[68]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#26377;Index&#30340;Series&#30340;&#25805;&#20316;">&#26377;Index&#30340;Series&#30340;&#25805;&#20316;<a class="anchor-link" href="#&#26377;Index&#30340;Series&#30340;&#25805;&#20316;">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#26377;Index&#30340;Series&#30340;&#21462;&#20540;">&#26377;Index&#30340;Series&#30340;&#21462;&#20540;<a class="anchor-link" href="#&#26377;Index&#30340;Series&#30340;&#21462;&#20540;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">絆倒次數</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[69]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>小明    3
+小華    4
+小美    5
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">絆倒次數</span><span class="p">[</span><span class="s">&#39;小華&#39;</span><span class="p">:</span><span class="s">&#39;小美&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[70]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>小華    4
+小美    5
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#26377;Index&#30340;Series&#30340;&#36939;&#31639;">&#26377;Index&#30340;Series&#30340;&#36939;&#31639;<a class="anchor-link" href="#&#26377;Index&#30340;Series&#30340;&#36939;&#31639;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">絆倒次數</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[76]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>小明    1
+小華    2
+小美    3
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">年紀</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[77]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>小明    2
+小美    6
+小華    4
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">年紀</span> <span class="o">/</span> <span class="n">絆倒次數</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>小明    2
+小美    2
+小華    2
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Series-&#23526;&#38555;&#28436;&#32244;">Series &#23526;&#38555;&#28436;&#32244;<a class="anchor-link" href="#Series-&#23526;&#38555;&#28436;&#32244;">&#182;</a></h1><p>白雪公主想買🍎，可以幫他看看哪個國家的🍎最便宜嗎？</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img  src="20151203111709.gif"/></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21443;&#32771;&#31572;&#26696;">&#21443;&#32771;&#31572;&#26696;<a class="anchor-link" href="#&#21443;&#32771;&#31572;&#26696;">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macAirPrice</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">31900</span><span class="p">,</span> <span class="mi">7488</span><span class="p">,</span> <span class="mi">112800</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">1549</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;台灣&#39;</span><span class="p">,</span> <span class="s">&#39;香港&#39;</span><span class="p">,</span> <span class="s">&#39;日本&#39;</span><span class="p">,</span> <span class="s">&#39;美國&#39;</span><span class="p">,</span> <span class="s">&#39;澳洲&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">exchangeRate</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">32.45500</span><span class="p">,</span> <span class="mf">4.08000</span><span class="p">,</span> <span class="mf">23.28000</span><span class="p">,</span> <span class="mf">0.25970</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;美國&#39;</span><span class="p">,</span> <span class="s">&#39;香港&#39;</span><span class="p">,</span> <span class="s">&#39;澳洲&#39;</span><span class="p">,</span> <span class="s">&#39;日本&#39;</span><span class="p">,</span> <span class="s">&#39;台灣&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macAirPriceInTWD</span> <span class="o">=</span> <span class="n">macAirPrice</span> <span class="o">*</span> <span class="n">exchangeRate</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macAirPriceInTWD</span><span class="p">[</span><span class="s">&#39;日本&#39;</span><span class="p">]</span> <span class="o">*=</span> <span class="mf">1.08</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macAirPriceInTWD</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[119]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>台灣    31900.0000
+日本    31637.6928
+澳洲    36060.7200
+美國    32422.5450
+香港    30551.0400
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dataframe">Dataframe<a class="anchor-link" href="#Dataframe">&#182;</a></h1><ul>
+<li>像是表格一樣</li>
+<li>由多個Series組成</li>
+</ul>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Series to Dataframe
+select
+filter
+sort
+groupby
+sum, mean, balabala
+sort</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#22914;&#20309;&#24314;&#31435;Dataframe">&#22914;&#20309;&#24314;&#31435;Dataframe<a class="anchor-link" href="#&#22914;&#20309;&#24314;&#31435;Dataframe">&#182;</a></h1><h2 id="From-Series-to-Dataframe">From Series to Dataframe<a class="anchor-link" href="#From-Series-to-Dataframe">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Big-Mac-Index">Big Mac Index<a class="anchor-link" href="#Big-Mac-Index">&#182;</a></h3><ul>
+<li><a href="http://www.economist.com/content/big-mac-index">http://www.economist.com/content/big-mac-index</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[243]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s">&#39;原始價格&#39;</span><span class="p">:</span> <span class="n">macAirPrice</span><span class="p">,</span>
+        <span class="s">&#39;外幣：台幣&#39;</span><span class="p">:</span> <span class="n">exchangeRate</span><span class="p">,</span>
+        <span class="s">&#39;台幣：外幣&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">exchangeRate</span><span class="p">,</span>
+        <span class="s">&#39;實際價格&#39;</span><span class="p">:</span> <span class="n">macAirPriceInTWD</span> <span class="c"># macAirPrice * exchangeRate</span>
+    <span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[244]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[244]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -713,257 +1858,230 @@ dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>r</th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+    </tr>
+    <tr>
+      <th>澳洲</th>
+      <td>1549</td>
+      <td>0.042955</td>
+      <td>23.2800</td>
+      <td>36060.7200</td>
+    </tr>
+    <tr>
+      <th>美國</th>
+      <td>999</td>
+      <td>0.030812</td>
+      <td>32.4550</td>
+      <td>32422.5450</td>
+    </tr>
+    <tr>
+      <th>香港</th>
+      <td>7488</td>
+      <td>0.245098</td>
+      <td>4.0800</td>
+      <td>30551.0400</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="From-CSV-to-Dataframe">From CSV to Dataframe<a class="anchor-link" href="#From-CSV-to-Dataframe">&#182;</a></h2><ul>
+<li>大絕招</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[296]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&#39;http://opendata.epa.gov.tw/ws/Data/AQX/?format=csv&amp;ndctype=CSV&amp;ndcnid=6074&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[223]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[223]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SiteName</th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>0.877835</td>
+      <td>麥寮</td>
+      <td>雲林縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>1.6</td>
+      <td>0.19</td>
+      <td>24.0</td>
+      <td>84</td>
+      <td>25</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>58</td>
+      <td>3</td>
+      <td>8.40</td>
+      <td>2.37</td>
+      <td>2015-12-21 01:00</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.970443</td>
+      <td>關山</td>
+      <td>臺東縣</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>9.4</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4.6</td>
+      <td>0.5</td>
+      <td>318</td>
+      <td>1</td>
+      <td>6.12</td>
+      <td>1.48</td>
+      <td>2015-12-21 01:00</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>0.277161</td>
+      <td>馬公</td>
+      <td>澎湖縣</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.1</td>
+      <td>0.18</td>
+      <td>35.0</td>
+      <td>34</td>
+      <td>23</td>
+      <td>3.6</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>2</td>
+      <td>4.26</td>
+      <td>0.71</td>
+      <td>2015-12-21 01:00</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.070850</td>
+      <td>金門</td>
+      <td>金門縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>4.6</td>
+      <td>0.38</td>
+      <td>9.8</td>
+      <td>79</td>
+      <td>40</td>
+      <td>17.0</td>
+      <td>0.7</td>
+      <td>109</td>
+      <td>3</td>
+      <td>18.74</td>
+      <td>1.38</td>
+      <td>2015-12-21 01:00</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.948821</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.191102</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.370722</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.753301</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.690350</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.518390</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.753918</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>0.414843</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>0.999778</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>0.529201</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>0.003567</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>0.775400</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>0.297386</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>0.958377</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>0.911458</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>0.575909</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>0.093875</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>0.553545</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>0.011632</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>0.420140</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>0.057212</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>0.886261</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>0.853212</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>0.067690</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>0.996335</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>0.776248</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>70</th>
-      <td>0.305929</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>0.796620</td>
-    </tr>
-    <tr>
-      <th>72</th>
-      <td>0.995648</td>
-    </tr>
-    <tr>
-      <th>73</th>
-      <td>0.983297</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>0.008313</td>
-    </tr>
-    <tr>
-      <th>75</th>
-      <td>0.663278</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>0.894522</td>
-    </tr>
-    <tr>
-      <th>77</th>
-      <td>0.260324</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>0.151666</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>0.251335</td>
-    </tr>
-    <tr>
-      <th>80</th>
-      <td>0.665680</td>
-    </tr>
-    <tr>
-      <th>81</th>
-      <td>0.934258</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>0.913364</td>
-    </tr>
-    <tr>
-      <th>83</th>
-      <td>0.250066</td>
-    </tr>
-    <tr>
-      <th>84</th>
-      <td>0.893457</td>
-    </tr>
-    <tr>
-      <th>85</th>
-      <td>0.785778</td>
-    </tr>
-    <tr>
-      <th>86</th>
-      <td>0.139659</td>
-    </tr>
-    <tr>
-      <th>87</th>
-      <td>0.304034</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>0.857651</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>0.272926</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>0.683898</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>0.873169</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>0.548335</td>
-    </tr>
-    <tr>
-      <th>93</th>
-      <td>0.585394</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>0.234288</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>0.154820</td>
-    </tr>
-    <tr>
-      <th>96</th>
-      <td>0.494506</td>
-    </tr>
-    <tr>
-      <th>97</th>
-      <td>0.051640</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>0.301620</td>
-    </tr>
-    <tr>
-      <th>99</th>
-      <td>0.595527</td>
+      <td>馬祖</td>
+      <td>連江縣</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.4</td>
+      <td>0.22</td>
+      <td>22.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>0.5</td>
+      <td>15</td>
+      <td>NaN</td>
+      <td>7.30</td>
+      <td>0.33</td>
+      <td>2015-12-21 01:00</td>
     </tr>
   </tbody>
 </table>
-<p>100 rows × 1 columns</p>
 </div>
 </div>
 
@@ -972,13 +2090,346 @@ dtype: int64
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[319]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[319]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>SiteName           object
+County             object
+PSI                 int64
+MajorPollutant     object
+Status             object
+SO2               float64
+CO                float64
+O3                float64
+PM10              float64
+PM2.5             float64
+NO2               float64
+WindSpeed         float64
+WindDirec         float64
+FPMI              float64
+NOx               float64
+NO                float64
+PublishTime        object
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[320]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># Import the IPython display module</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s">&#39;/notebooks/python-course/playground.ipynb&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[320]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="900"
+            height="500"
+            src="/notebooks/python-course/playground.ipynb"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="http://data.tainan.gov.tw/dataset/3ad9da64-0c29-4299-b769-320b57a09be8/resource/cdbdbd7f-e5ba-4cad-9dac-f0bd441e58bd/download/0930.xls">http://data.tainan.gov.tw/dataset/3ad9da64-0c29-4299-b769-320b57a09be8/resource/cdbdbd7f-e5ba-4cad-9dac-f0bd441e58bd/download/0930.xls</a></li>
+<li>讀資料</li>
+<li>身高體重</li>
+</ul>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dataframe&#30340;&#25805;&#20316;">Dataframe&#30340;&#25805;&#20316;<a class="anchor-link" href="#Dataframe&#30340;&#25805;&#20316;">&#182;</a></h1><ul>
+<li>針對column（欄位）的操作</li>
+<li>針對row（列）的操作</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#37341;&#23565;column&#65288;&#27396;&#20301;&#65289;&#30340;&#25805;&#20316;">&#37341;&#23565;column&#65288;&#27396;&#20301;&#65289;&#30340;&#25805;&#20316;<a class="anchor-link" href="#&#37341;&#23565;column&#65288;&#27396;&#20301;&#65289;&#30340;&#25805;&#20316;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[245]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+    </tr>
+    <tr>
+      <th>澳洲</th>
+      <td>1549</td>
+      <td>0.042955</td>
+      <td>23.2800</td>
+      <td>36060.7200</td>
+    </tr>
+    <tr>
+      <th>美國</th>
+      <td>999</td>
+      <td>0.030812</td>
+      <td>32.4550</td>
+      <td>32422.5450</td>
+    </tr>
+    <tr>
+      <th>香港</th>
+      <td>7488</td>
+      <td>0.245098</td>
+      <td>4.0800</td>
+      <td>30551.0400</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[314]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="p">[</span><span class="s">&#39;台幣：外幣&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[314]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>台灣    1.000000
+日本    3.850597
+澳洲    0.042955
+美國    0.030812
+香港    0.245098
+Name: 台幣：外幣, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[316]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="p">[</span><span class="s">&#39;台幣：外幣&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[316]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>美國    0.030812
+澳洲    0.042955
+香港    0.245098
+台灣    1.000000
+日本    3.850597
+Name: 台幣：外幣, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[317]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="p">[[</span><span class="s">&#39;台幣：外幣&#39;</span><span class="p">,</span> <span class="s">&#39;原始價格&#39;</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[317]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>台幣：外幣</th>
+      <th>原始價格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>1.000000</td>
+      <td>31900</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>3.850597</td>
+      <td>112800</td>
+    </tr>
+    <tr>
+      <th>澳洲</th>
+      <td>0.042955</td>
+      <td>1549</td>
+    </tr>
+    <tr>
+      <th>美國</th>
+      <td>0.030812</td>
+      <td>999</td>
+    </tr>
+    <tr>
+      <th>香港</th>
+      <td>0.245098</td>
+      <td>7488</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[264]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">pylab</span> inline
+<span class="n">macIndex</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;台幣：外幣&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&#39;原始價格&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s">&#39;scatter&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -996,16 +2447,163 @@ dtype: int64
 </div>
 </div>
 
-</div>
+<div class="output_area"><div class="prompt output_prompt">Out[264]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f7bed3c4780&gt;</pre>
 </div>
 
 </div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZsAAAEPCAYAAACUb2mtAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAGMRJREFUeJzt3X+MXeV95/H3B4iD2xIE3QK7JqRkwYmJtg20cVJld3M3
+yGOgkgGxOM6mZWisRApUJYkVYSdSbBKlLUgo7m4FESoFg5pYhAjhdInHZs3sil1+OE0oKXbA0i4E
+O+Ds8sNRtFbWON/9457B15MZMxPmzJ0f75c0yrnf+zznPscm8/F5znPOTVUhSVKbjuv3ACRJc59h
+I0lqnWEjSWqdYSNJap1hI0lqnWEjSWrdtIRNktuT7E/yZE/tpiS7kzyR5FtJ3tbz3roke5r3B3rq
+FyR5MskzSTb21Bck2dz0eSTJWT3vDTbtn05y1XQcryTpaNN1ZnMHsHxUbRvwnqp6L7AHWAeQ5Dxg
+JbAEuBi4JUmaPrcCq6tqMbA4ycg+VwMvV9W5wEbgpmZfpwBfBN4HvB9Yn+Tkdg5RkjSeaQmbqnoY
+eGVU7cGq+kXz8lHgzGZ7BbC5ql6rqmfpBtHSJGcAJ1XVzqbdXcBlzfalwKZm+17gw832cmBbVR2o
+qlfpBtxFU3pwkqQ3NFOu2XwceKDZXgQ83/Pevqa2CNjbU9/b1I7qU1WHgQNJTj3GviRJ06jvYZPk
+C8ChqvrGVO52CvclSXqTTujnhye5GriEI9Ne0D37eHvP6zOb2nj13j4/TnI88LaqejnJPqAzqs9D
+44zFh8RJ0q+gqt7wH/jTeWYTes44klwEfA5YUVU/72m3BVjVrDA7GzgHeLyqXqQ7Pba0WTBwFXB/
+T5/BZvtKYEezPQQsS3Jys1hgWVMbU1XN2Z/169f3fQwen8c3H49vLh9b1cT/jT4tZzZJvk73DOM3
+k/wIWA98HlgAbG8Wmz1aVddU1a4k9wC7gEPANXXkiK4F7gROBB6oqq1N/Xbg7iR7gJeAVQBV9UqS
+LwPfBQq4oboLBSRJ02hawqaq/sMY5TuO0f4vgL8Yo/4PwL8ao/5zusulx9rXnXQDSpLUJ31fIKDp
+0el0+j2EVnl8s9tcPr65fGyTkcnMuc1lSco/C0manCTUDFsgIEmapwwbSVLrDBtJ+hUMDQ0xMHAF
+AwNXMDQ07h0VanjNpuE1G0kTNTQ0xOWXD3Lw4I0ALFx4Pffdt4nly0c/b3jum+g1G8OmYdhImqiB
+gSvYvn0FR+4l38SyZVvYtu1b/RxWX7hAQJI0Y/T12WiSNButWfNJHn54kIMHu68XLryeNWs2HbvT
+POc0WsNpNEmTMTQ0xM033wZ0w2c+Xq8Br9lMmmEjSZPnNRtJ0oxh2EiSWmfYSJJaZ9hIklpn2EiS
+WmfYSJJaZ9hIklpn2EiSWmfYSJJaZ9hIklpn2EiSWmfYSJJaNy1hk+T2JPuTPNlTOyXJtiRPJxlK
+cnLPe+uS7EmyO8lAT/2CJE8meSbJxp76giSbmz6PJDmr573Bpv3TSa6ajuOVJB1tus5s7gBGP397
+LfBgVb0L2AGsA0hyHrASWAJcDNySZOSJorcCq6tqMbA4ycg+VwMvV9W5wEbgpmZfpwBfBN4HvB9Y
+3xtqkqTpMS1hU1UPA6+MKl8KjHzb0CbgsmZ7BbC5ql6rqmeBPcDSJGcAJ1XVzqbdXT19evd1L/Dh
+Zns5sK2qDlTVq8A24KIpOzBJ0oT085rNaVW1H6CqXgROa+qLgOd72u1raouAvT31vU3tqD5VdRg4
+kOTUY+xLkjSNZtLXQk/lN5e94Rf5jGXDhg2vb3c6HTqdzhQNR5LmhuHhYYaHhyfdr59hsz/J6VW1
+v5ki+0lT3we8vafdmU1tvHpvnx8nOR54W1W9nGQf0BnV56HxBtQbNpKkXzb6H+I33HDDhPpN5zRa
+OPqMYwtwdbM9CNzfU1/VrDA7GzgHeLyZajuQZGmzYOCqUX0Gm+0r6S44ABgCliU5uVkssKypSZKm
+0bSc2ST5Ot0zjN9M8iNgPfCXwDeTfBx4ju4KNKpqV5J7gF3AIeCaqhqZYrsWuBM4EXigqrY29duB
+u5PsAV4CVjX7eiXJl4Hv0p2mu6FZKCBJmkY58nt8fktS/llI0uQkoare8Dq5TxCQJLXOsJEktc6w
+kSS1zrCRJLXOsJEktc6wkSS1zrCRJLXOsJEktc6wkSS1zrCRJLXOsJEktc6wkSS1zrCRJLXOsJEk
+tc6wkSS1zrCRJLXOsJEktc6wkSS1zrCRJLXOsJEktc6wkSS1zrCRJLXOsJEkta7vYZNkXZKnkjyZ
+5O+SLEhySpJtSZ5OMpTk5FHt9yTZnWSgp35Bs49nkmzsqS9Isrnp80iSs6b7GCVpvutr2CR5B/AJ
+4Pyq+h3gBOCjwFrgwap6F7ADWNe0Pw9YCSwBLgZuSZJmd7cCq6tqMbA4yfKmvhp4uarOBTYCN03L
+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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#26032;&#22686;Column&#65288;&#27396;&#20301;&#65289;">&#26032;&#22686;Column&#65288;&#27396;&#20301;&#65289;<a class="anchor-link" href="#&#26032;&#22686;Column&#65288;&#27396;&#20301;&#65289;">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[249]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="p">[</span><span class="s">&#39;人均GDP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span>
+    <span class="s">&#39;美國&#39;</span><span class="p">:</span> <span class="mf">54596.65</span><span class="p">,</span>
+    <span class="s">&#39;日本&#39;</span><span class="p">:</span> <span class="mf">37389.79</span><span class="p">,</span>
+    <span class="s">&#39;台灣&#39;</span><span class="p">:</span> <span class="mf">45853.74</span><span class="p">,</span>
+    <span class="s">&#39;香港&#39;</span><span class="p">:</span> <span class="mf">54722.12</span><span class="p">,</span>
+    <span class="s">&#39;澳洲&#39;</span><span class="p">:</span> <span class="mf">46433.30</span>
+<span class="p">})</span>
 </pre></div>
 
 </div>
@@ -1015,23 +2613,10 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[250]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span>
 </pre></div>
 
 </div>
@@ -1042,110 +2627,1627 @@ dtype: int64
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[250]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+      <th>人均GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+      <td>45853.74</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+      <td>37389.79</td>
+    </tr>
+    <tr>
+      <th>澳洲</th>
+      <td>1549</td>
+      <td>0.042955</td>
+      <td>23.2800</td>
+      <td>36060.7200</td>
+      <td>46433.30</td>
+    </tr>
+    <tr>
+      <th>美國</th>
+      <td>999</td>
+      <td>0.030812</td>
+      <td>32.4550</td>
+      <td>32422.5450</td>
+      <td>54596.65</td>
+    </tr>
+    <tr>
+      <th>香港</th>
+      <td>7488</td>
+      <td>0.245098</td>
+      <td>4.0800</td>
+      <td>30551.0400</td>
+      <td>54722.12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[251]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s">&#39;人均GDP&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&#39;實際價格&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s">&#39;scatter&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[251]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[3,
- 90,
- 88,
- 58,
- 4,
- 48,
- 92,
- 42,
- 94,
- 57,
- 21,
- 48,
- 24,
- 39,
- 74,
- 45,
- 88,
- 95,
- 44,
- 21,
- 52,
- 77,
- 93,
- 20,
- 99,
- 23,
- 24,
- 52,
- 75,
- 45,
- 17,
- 65,
- 40,
- 99,
- 63,
- 47,
- 40,
- 74,
- 71,
- 30,
- 9,
- 44,
- 80,
- 84,
- 95,
- 14,
- 66,
- 84,
- 54,
- 64,
- 81,
- 81,
- 54,
- 17,
- 11,
- 6,
- 86,
- 55,
- 93,
- 45,
- 79,
- 91,
- 44,
- 38,
- 28,
- 94,
- 72,
- 94,
- 27,
- 13,
- 74,
- 72,
- 2,
- 42,
- 7,
- 24,
- 64,
- 92,
- 99,
- 20,
- 38,
- 6,
- 51,
- 15,
- 29,
- 89,
- 96,
- 1,
- 98,
- 26,
- 36,
- 63,
- 49,
- 17,
- 98,
- 82,
- 62,
- 15,
- 17,
- 53]</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f7bed474080&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+QmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#37341;&#23565;row&#65288;&#21015;&#65289;&#30340;&#25805;&#20316;">&#37341;&#23565;row&#65288;&#21015;&#65289;&#30340;&#25805;&#20316;<a class="anchor-link" href="#&#37341;&#23565;row&#65288;&#21015;&#65289;&#30340;&#25805;&#20316;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[252]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[252]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+      <th>人均GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+      <td>45853.74</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+      <td>37389.79</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[253]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s">&#39;台灣&#39;</span><span class="p">:</span><span class="s">&#39;日本&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[253]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+      <th>人均GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+      <td>45853.74</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+      <td>37389.79</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[254]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">macIndex</span><span class="o">.</span><span class="n">ix</span><span class="p">[[</span><span class="s">&#39;台灣&#39;</span><span class="p">,</span> <span class="s">&#39;日本&#39;</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[254]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>原始價格</th>
+      <th>台幣：外幣</th>
+      <th>外幣：台幣</th>
+      <th>實際價格</th>
+      <th>人均GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>台灣</th>
+      <td>31900</td>
+      <td>1.000000</td>
+      <td>1.0000</td>
+      <td>31900.0000</td>
+      <td>45853.74</td>
+    </tr>
+    <tr>
+      <th>日本</th>
+      <td>112800</td>
+      <td>3.850597</td>
+      <td>0.2597</td>
+      <td>31637.6928</td>
+      <td>37389.79</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>埋伏筆</p>
+
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#35036;&#20540;">&#35036;&#20540;<a class="anchor-link" href="#&#35036;&#20540;">&#182;</a></h1><ul>
+<li>補充資料 <a href="http://pandas.pydata.org/pandas-docs/stable/missing_data.html">http://pandas.pydata.org/pandas-docs/stable/missing_data.html</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[322]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># Import the IPython display module</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s">&#39;/notebooks/python-course/playground.ipynb&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[322]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="900"
+            height="500"
+            src="/notebooks/python-course/playground.ipynb"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dataframe&#23526;&#38555;&#28436;&#32244;1">Dataframe&#23526;&#38555;&#28436;&#32244;1<a class="anchor-link" href="#Dataframe&#23526;&#38555;&#28436;&#32244;1">&#182;</a></h1><ul>
+<li>將任一csv檔讀到Dataframe中</li>
+<li>對colomn及row做一些操作</li>
+<li>試著建立新的column</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Filter">Filter<a class="anchor-link" href="#Filter">&#182;</a></h1><ul>
+<li>先看看資料長什麼樣子</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[307]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[307]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SiteName</th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>麥寮</td>
+      <td>雲林縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>1.6</td>
+      <td>0.19</td>
+      <td>24.0</td>
+      <td>84</td>
+      <td>25</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>58</td>
+      <td>3</td>
+      <td>8.40</td>
+      <td>2.37</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>關山</td>
+      <td>臺東縣</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>9.4</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4.6</td>
+      <td>0.5</td>
+      <td>318</td>
+      <td>1</td>
+      <td>6.12</td>
+      <td>1.48</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>馬公</td>
+      <td>澎湖縣</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.1</td>
+      <td>0.18</td>
+      <td>35.0</td>
+      <td>34</td>
+      <td>23</td>
+      <td>3.6</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>2</td>
+      <td>4.26</td>
+      <td>0.71</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>金門</td>
+      <td>金門縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>4.6</td>
+      <td>0.38</td>
+      <td>9.8</td>
+      <td>79</td>
+      <td>40</td>
+      <td>17.0</td>
+      <td>0.7</td>
+      <td>109</td>
+      <td>3</td>
+      <td>18.74</td>
+      <td>1.38</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>馬祖</td>
+      <td>連江縣</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.4</td>
+      <td>0.22</td>
+      <td>22.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>0.5</td>
+      <td>15</td>
+      <td>NaN</td>
+      <td>7.30</td>
+      <td>0.33</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#19968;&#20491;&#26781;&#20214;&#30340;Filter">&#19968;&#20491;&#26781;&#20214;&#30340;Filter<a class="anchor-link" href="#&#19968;&#20491;&#26781;&#20214;&#30340;Filter">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[308]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="p">[</span><span class="n">airPollution</span><span class="p">[</span><span class="s">&#39;SiteName&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;關山&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[308]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SiteName</th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>關山</td>
+      <td>臺東縣</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>9.4</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4.6</td>
+      <td>0.5</td>
+      <td>318</td>
+      <td>1</td>
+      <td>6.12</td>
+      <td>1.48</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><aside class="notes">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#22475;&#20239;&#31558;">&#22475;&#20239;&#31558;<a class="anchor-link" href="#&#22475;&#20239;&#31558;">&#182;</a></h1>
+</div>
+</div>
+</div>
+</aside></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#22810;&#20491;&#26781;&#20214;&#30340;Filter">&#22810;&#20491;&#26781;&#20214;&#30340;Filter<a class="anchor-link" href="#&#22810;&#20491;&#26781;&#20214;&#30340;Filter">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[301]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="p">[(</span><span class="n">airPollution</span><span class="p">[</span><span class="s">&#39;SO2&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">airPollution</span><span class="p">[</span><span class="s">&#39;PM2.5&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[301]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SiteName</th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>復興</td>
+      <td>高雄市</td>
+      <td>79</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>3.9</td>
+      <td>0.81</td>
+      <td>7.5</td>
+      <td>110</td>
+      <td>72</td>
+      <td>29</td>
+      <td>1.4</td>
+      <td>110</td>
+      <td>9</td>
+      <td>32.45</td>
+      <td>3.18</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>永和</td>
+      <td>新北市</td>
+      <td>60</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>2.9</td>
+      <td>1.54</td>
+      <td>2.1</td>
+      <td>79</td>
+      <td>55</td>
+      <td>42</td>
+      <td>0.7</td>
+      <td>240</td>
+      <td>5</td>
+      <td>77.05</td>
+      <td>34.67</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>竹山</td>
+      <td>南投縣</td>
+      <td>86</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>3.1</td>
+      <td>0.68</td>
+      <td>7.7</td>
+      <td>122</td>
+      <td>84</td>
+      <td>22</td>
+      <td>0.8</td>
+      <td>195</td>
+      <td>10</td>
+      <td>23.30</td>
+      <td>1.09</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>三重</td>
+      <td>新北市</td>
+      <td>67</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>6.6</td>
+      <td>2.71</td>
+      <td>NaN</td>
+      <td>95</td>
+      <td>47</td>
+      <td>51</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>167.65</td>
+      <td>116.61</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>潮州</td>
+      <td>屏東縣</td>
+      <td>72</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>1.9</td>
+      <td>0.58</td>
+      <td>9.0</td>
+      <td>116</td>
+      <td>70</td>
+      <td>19</td>
+      <td>0.7</td>
+      <td>44</td>
+      <td>6</td>
+      <td>20.57</td>
+      <td>1.32</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[303]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># Import the IPython display module</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s">&#39;/notebooks/python-course/playground.ipynb&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">900</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[303]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+        <iframe
+            width="900"
+            height="500"
+            src="/notebooks/python-course/playground.ipynb"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#24314;&#31435;&#32034;&#24341;">&#24314;&#31435;&#32034;&#24341;<a class="anchor-link" href="#&#24314;&#31435;&#32034;&#24341;">&#182;</a></h1><ul>
+<li>先看看資料長什麼樣子</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[208]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[208]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SiteName</th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>麥寮</td>
+      <td>雲林縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>1.6</td>
+      <td>0.19</td>
+      <td>24.0</td>
+      <td>84</td>
+      <td>25</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>58</td>
+      <td>3</td>
+      <td>8.40</td>
+      <td>2.37</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>關山</td>
+      <td>臺東縣</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>9.4</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4.6</td>
+      <td>0.5</td>
+      <td>318</td>
+      <td>1</td>
+      <td>6.12</td>
+      <td>1.48</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>馬公</td>
+      <td>澎湖縣</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.1</td>
+      <td>0.18</td>
+      <td>35.0</td>
+      <td>34</td>
+      <td>23</td>
+      <td>3.6</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>2</td>
+      <td>4.26</td>
+      <td>0.71</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>金門</td>
+      <td>金門縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>4.6</td>
+      <td>0.38</td>
+      <td>9.8</td>
+      <td>79</td>
+      <td>40</td>
+      <td>17.0</td>
+      <td>0.7</td>
+      <td>109</td>
+      <td>3</td>
+      <td>18.74</td>
+      <td>1.38</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>馬祖</td>
+      <td>連江縣</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.4</td>
+      <td>0.22</td>
+      <td>22.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>0.5</td>
+      <td>15</td>
+      <td>NaN</td>
+      <td>7.30</td>
+      <td>0.33</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[224]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span> <span class="o">=</span> <span class="n">airPollution</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">&#39;SiteName&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[225]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[225]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>County</th>
+      <th>PSI</th>
+      <th>MajorPollutant</th>
+      <th>Status</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+      <th>PublishTime</th>
+    </tr>
+    <tr>
+      <th>SiteName</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>麥寮</th>
+      <td>雲林縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>1.6</td>
+      <td>0.19</td>
+      <td>24.0</td>
+      <td>84</td>
+      <td>25</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>58</td>
+      <td>3</td>
+      <td>8.40</td>
+      <td>2.37</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>關山</th>
+      <td>臺東縣</td>
+      <td>18</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>9.4</td>
+      <td>16</td>
+      <td>12</td>
+      <td>4.6</td>
+      <td>0.5</td>
+      <td>318</td>
+      <td>1</td>
+      <td>6.12</td>
+      <td>1.48</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>馬公</th>
+      <td>澎湖縣</td>
+      <td>35</td>
+      <td>NaN</td>
+      <td>良好</td>
+      <td>1.1</td>
+      <td>0.18</td>
+      <td>35.0</td>
+      <td>34</td>
+      <td>23</td>
+      <td>3.6</td>
+      <td>2.0</td>
+      <td>68</td>
+      <td>2</td>
+      <td>4.26</td>
+      <td>0.71</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>金門</th>
+      <td>金門縣</td>
+      <td>64</td>
+      <td>懸浮微粒</td>
+      <td>普通</td>
+      <td>4.6</td>
+      <td>0.38</td>
+      <td>9.8</td>
+      <td>79</td>
+      <td>40</td>
+      <td>17.0</td>
+      <td>0.7</td>
+      <td>109</td>
+      <td>3</td>
+      <td>18.74</td>
+      <td>1.38</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+    <tr>
+      <th>馬祖</th>
+      <td>連江縣</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.4</td>
+      <td>0.22</td>
+      <td>22.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>0.5</td>
+      <td>15</td>
+      <td>NaN</td>
+      <td>7.30</td>
+      <td>0.33</td>
+      <td>2015-12-21 01:00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[255]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="s">&#39;關山&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[255]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>County                         臺東縣
+PSI                             18
+MajorPollutant                 NaN
+Status                          良好
+SO2                              1
+CO                             NaN
+O3                             9.4
+PM10                            16
+PM2.5                           12
+NO2                            4.6
+WindSpeed                      0.5
+WindDirec                      318
+FPMI                             1
+NOx                           6.12
+NO                            1.48
+PublishTime       2015-12-21 01:00
+Name: 關山, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#35242;&#36523;&#32147;&#39511;">&#35242;&#36523;&#32147;&#39511;<a class="anchor-link" href="#&#35242;&#36523;&#32147;&#39511;">&#182;</a></h2><ul>
+<li>多想兩分鐘，你可以節省兩天</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Groupby">Groupby<a class="anchor-link" href="#Groupby">&#182;</a></h1><ul>
+<li>補充資料：<a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html">http://pandas.pydata.org/pandas-docs/stable/groupby.html</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;County&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[285]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PSI</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+    </tr>
+    <tr>
+      <th>County</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>南投縣</th>
+      <td>71.666667</td>
+      <td>3.433333</td>
+      <td>0.683333</td>
+      <td>6.033333</td>
+      <td>96.666667</td>
+      <td>63.0</td>
+      <td>23.666667</td>
+      <td>0.833333</td>
+      <td>159.333333</td>
+      <td>7.333333</td>
+      <td>25.656667</td>
+      <td>2.110</td>
+    </tr>
+    <tr>
+      <th>嘉義市</th>
+      <td>79.000000</td>
+      <td>3.700000</td>
+      <td>0.730000</td>
+      <td>5.800000</td>
+      <td>121.000000</td>
+      <td>54.0</td>
+      <td>26.000000</td>
+      <td>2.200000</td>
+      <td>334.000000</td>
+      <td>5.000000</td>
+      <td>26.840000</td>
+      <td>0.760</td>
+    </tr>
+    <tr>
+      <th>嘉義縣</th>
+      <td>71.000000</td>
+      <td>2.350000</td>
+      <td>0.295000</td>
+      <td>16.500000</td>
+      <td>74.000000</td>
+      <td>23.0</td>
+      <td>10.150000</td>
+      <td>1.500000</td>
+      <td>327.000000</td>
+      <td>3.500000</td>
+      <td>11.450000</td>
+      <td>1.360</td>
+    </tr>
+    <tr>
+      <th>基隆市</th>
+      <td>47.000000</td>
+      <td>4.400000</td>
+      <td>0.800000</td>
+      <td>2.800000</td>
+      <td>56.000000</td>
+      <td>43.0</td>
+      <td>38.000000</td>
+      <td>1.100000</td>
+      <td>83.000000</td>
+      <td>3.000000</td>
+      <td>42.770000</td>
+      <td>4.630</td>
+    </tr>
+    <tr>
+      <th>宜蘭縣</th>
+      <td>36.500000</td>
+      <td>3.000000</td>
+      <td>0.230000</td>
+      <td>14.000000</td>
+      <td>36.000000</td>
+      <td>7.5</td>
+      <td>7.550000</td>
+      <td>0.800000</td>
+      <td>250.000000</td>
+      <td>1.000000</td>
+      <td>9.315000</td>
+      <td>1.785</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;County&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s">&#39;PM2.5&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[286]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>County
+南投縣    63.000000
+嘉義市    54.000000
+嘉義縣    23.000000
+基隆市    43.000000
+宜蘭縣     7.500000
+屏東縣    50.000000
+彰化縣    23.666667
+新北市    46.000000
+新竹市    21.000000
+新竹縣    28.500000
+桃園市    31.500000
+澎湖縣    23.000000
+臺中市    33.800000
+臺北市    39.285714
+臺南市    40.000000
+臺東縣     7.500000
+花蓮縣    13.000000
+苗栗縣    35.666667
+連江縣          NaN
+金門縣    40.000000
+雲林縣    28.000000
+高雄市    68.166667
+Name: PM2.5, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sort">Sort<a class="anchor-link" href="#Sort">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[304]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;County&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s">&#39;PM2.5&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[304]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>County
+高雄市    68.166667
+南投縣    63.000000
+嘉義市    54.000000
+屏東縣    50.000000
+新北市    46.000000
+基隆市    43.000000
+金門縣    40.000000
+臺南市    40.000000
+臺北市    39.285714
+苗栗縣    35.666667
+臺中市    33.800000
+桃園市    31.500000
+新竹縣    28.500000
+雲林縣    28.000000
+彰化縣    23.666667
+澎湖縣    23.000000
+嘉義縣    23.000000
+新竹市    21.000000
+花蓮縣    13.000000
+宜蘭縣     7.500000
+臺東縣     7.500000
+連江縣          NaN
+Name: PM2.5, dtype: float64</pre>
 </div>
 
 </div>
@@ -1156,20 +4258,156 @@ dtype: int64
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[305]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s">&#39;rs&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">airPollution</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">&#39;County&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;PM2.5&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="k">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[305]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PSI</th>
+      <th>SO2</th>
+      <th>CO</th>
+      <th>O3</th>
+      <th>PM10</th>
+      <th>PM2.5</th>
+      <th>NO2</th>
+      <th>WindSpeed</th>
+      <th>WindDirec</th>
+      <th>FPMI</th>
+      <th>NOx</th>
+      <th>NO</th>
+    </tr>
+    <tr>
+      <th>County</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>高雄市</th>
+      <td>79.250000</td>
+      <td>3.691667</td>
+      <td>0.654167</td>
+      <td>12.408333</td>
+      <td>117.833333</td>
+      <td>68.166667</td>
+      <td>22.833333</td>
+      <td>1.200000</td>
+      <td>121.925000</td>
+      <td>7.333333</td>
+      <td>25.410000</td>
+      <td>2.465833</td>
+    </tr>
+    <tr>
+      <th>南投縣</th>
+      <td>71.666667</td>
+      <td>3.433333</td>
+      <td>0.683333</td>
+      <td>6.033333</td>
+      <td>96.666667</td>
+      <td>63.000000</td>
+      <td>23.666667</td>
+      <td>0.833333</td>
+      <td>159.333333</td>
+      <td>7.333333</td>
+      <td>25.656667</td>
+      <td>2.110000</td>
+    </tr>
+    <tr>
+      <th>嘉義市</th>
+      <td>79.000000</td>
+      <td>3.700000</td>
+      <td>0.730000</td>
+      <td>5.800000</td>
+      <td>121.000000</td>
+      <td>54.000000</td>
+      <td>26.000000</td>
+      <td>2.200000</td>
+      <td>334.000000</td>
+      <td>5.000000</td>
+      <td>26.840000</td>
+      <td>0.760000</td>
+    </tr>
+    <tr>
+      <th>屏東縣</th>
+      <td>60.333333</td>
+      <td>1.833333</td>
+      <td>0.426667</td>
+      <td>21.000000</td>
+      <td>82.666667</td>
+      <td>50.000000</td>
+      <td>12.933333</td>
+      <td>2.633333</td>
+      <td>36.000000</td>
+      <td>5.000000</td>
+      <td>14.163333</td>
+      <td>1.006667</td>
+    </tr>
+    <tr>
+      <th>新北市</th>
+      <td>59.909091</td>
+      <td>4.000000</td>
+      <td>1.004545</td>
+      <td>6.590000</td>
+      <td>78.000000</td>
+      <td>46.000000</td>
+      <td>33.436364</td>
+      <td>1.288889</td>
+      <td>226.000000</td>
+      <td>4.545455</td>
+      <td>53.244545</td>
+      <td>19.907273</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#26368;&#24460;&#24819;&#36319;&#22823;&#23478;&#35498;&#30340;&#26159;">&#26368;&#24460;&#24819;&#36319;&#22823;&#23478;&#35498;&#30340;&#26159;<a class="anchor-link" href="#&#26368;&#24460;&#24819;&#36319;&#22823;&#23478;&#35498;&#30340;&#26159;">&#182;</a></h1>
+</div>
+</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[238]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
@@ -1182,7 +4420,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[239]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">16</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
@@ -1195,7 +4433,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[240]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">y</span> <span class="o">=</span> <span class="mi">13</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
@@ -1205,10 +4443,10 @@ dtype: int64
 </div>
 </div>
 
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[242]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -1222,11 +4460,11 @@ dtype: int64
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[242]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7f06826b2a58&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f7bed4257f0&gt;]</pre>
 </div>
 
 </div>
@@ -1425,20 +4663,7 @@ YF7A+yOjx5WKrQM+E2IqcGnseFYS41apc/cBMClJcQJP4N2ei4CvgFOBDYDhqfM6FGiY0DgT97oE
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1458,30 +4683,7 @@ YF7A+yOjx5WKrQM+E2IqcGnseFYS41apc/cBMClJcQJP4N2ei4CvgFOBDYDhqfM6FGiY0DgT97oE
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img  src="VhG3BFWl.jpg"/></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 
